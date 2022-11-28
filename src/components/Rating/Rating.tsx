@@ -17,7 +17,7 @@ function Rate(props: RateProps) {
   const onPointerEnter = () => null;
   const onPointerLeave = () => null;
   const onPointerMove = (value: number, index: number) =>
-    console.log(value, index);
+    console.log(value, index, rating);
 
   return (
     <Rating
