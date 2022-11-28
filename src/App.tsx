@@ -1,24 +1,15 @@
-import "./App.css";
-
-import { ArticleType } from "types";
-
-import { Layout } from "sections/Layout";
-import { Article } from "page/Board/components/Article/Article";
-import { dataTest } from "dataTest";
+import { routes } from "data/routes";
+import { Board } from "page/Board";
+import { Details } from "page/Details";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Layout>
-      <div className="flex justify-center items-center py-4 bg-light sm:px-2">
-        {dataTest && (
-          <ul className="w-4/5 sm:w-full">
-            {dataTest.map((article: ArticleType) => (
-              <Article article={article} key={article.id} />
-            ))}
-          </ul>
-        )}
-      </div>
-    </Layout>
+    <Routes>
+      <Route path={routes.board} element={<Board />} />
+
+      <Route path="article/:id" element={<Details />} />
+    </Routes>
   );
 }
 

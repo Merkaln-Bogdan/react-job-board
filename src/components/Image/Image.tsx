@@ -14,11 +14,7 @@ export function Image(props: ImageProps): React.ReactElement {
 
   return (
     <div className={className}>
-      <img
-        // srcSet={source}
-        src={source}
-        alt={alt}
-      />
+      <img src={source} alt={alt} className={className} />
     </div>
   );
 }
