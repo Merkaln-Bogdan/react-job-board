@@ -10,6 +10,7 @@ import { Picker } from "sections/Picker";
 import { Map } from "sections/Map";
 
 import { useDetails } from "./Details.hooks";
+import { useNavigate } from "react-router-dom";
 
 const Details = () => {
   const {
@@ -24,7 +25,7 @@ const Details = () => {
     phone,
     email,
   } = useDetails();
-
+  const navigate = useNavigate();
   return (
     <Layout>
       <div className="max-w-5xl flex justify-center py-14 px-4 sm:flex-col">
@@ -97,7 +98,7 @@ const Details = () => {
           </main>
 
           <Button
-            onClick={() => null}
+            onClick={() => navigate(-1)}
             className="mt-20 ml-mar_min_lg bg-light text-dark sm:hidden"
           >
             <Icon name="BsChevronLeft" className="mr-4" />
