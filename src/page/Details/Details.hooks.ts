@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 
-import { dataTest } from "dataTest";
+import { useAppSelector } from "redux/hooks";
+import { articlesSelector } from "redux/slices/articleSlice";
 
 const useDetails = () => {
   const { id } = useParams();
-  const article = dataTest?.filter((el) => el.id === id)[0];
+  const articlesList = useAppSelector(articlesSelector.selectAll);
+
+  const article = articlesList?.filter((el) => el.id === id)[0];
 
   return { ...article };
 };
