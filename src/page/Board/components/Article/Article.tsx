@@ -18,17 +18,17 @@ const Article = (props: ArticleProps) => {
   return (
     <li
       key={id}
-      className="flex mb-2 bg-white px-4 py-6 rounded-lg items-center shadow shadow-el-sdw sm:bg-bg_light sm:items-baseline"
+      className="flex mb-2 bg-white px-4 py-6 rounded-lg items-center shadow shadow-el-sdw sm:bg-bg_light"
     >
-      <div className="w-[85px] h-[85px] rounded-full sm:w-[55px] sm:h-[55px]">
+      <div className="w-[85px] h-[85px] rounded-full sm:self-baseline">
         <Image
           source={pictures[1]}
           alt="mini_post"
-          className="w-[85px] h-[85px] rounded-full sm:w-[55px] sm:h-[55px] sm:mt-4"
+          className="w-[85px] h-[85px] rounded-full sm:w-[55px] sm:h-[55px] sm:mt-6"
         />
       </div>
 
-      <div className="flex sm:flex-col-reverse">
+      <div className="flex space-between w-full sm:flex-col-reverse">
         <Link to={`/article/${id}`} className="mx-8 sm:mx-4">
           <p className="font-bold text-dark text-base">{title}</p>
           <div className="text-lightgray font-light">
