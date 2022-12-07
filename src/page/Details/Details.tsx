@@ -100,7 +100,7 @@ const Details = () => {
             Contacts
           </Headline>
           <Map
-            center={article.location}
+            center={{ lat: 48.22544, long: 16.352566 }}
             info={{ email: article.email, phone: article.phone }}
           />
         </div>
