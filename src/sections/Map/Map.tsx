@@ -32,13 +32,14 @@ type MapProps = {
   center: LocationType;
   info: any;
 };
+const libraries: any = ["places"];
 
 const Map = (props: MapProps) => {
   const { center, info } = { ...props };
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyDIsWcwptbQZ5jBvEHvuB1AjCeWaXOoWRo", /// should be proccess.env.NEXT_PUBLIC_GOOGLE_API_KEY
-    libraries: ["places"],
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
+    libraries,
   });
 
   const formatedCenter = {
