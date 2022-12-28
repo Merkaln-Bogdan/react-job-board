@@ -18,7 +18,7 @@ const defaulOptions = {
 
 const containerStyle = {
   display: "block",
-  minWidth: "375px",
+  minWidth: "320px",
   height: "400px",
   borderRadius: "8px",
 };
